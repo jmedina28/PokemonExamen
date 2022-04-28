@@ -40,3 +40,22 @@ def varianza(df):
     varianzaspeed = df["Speed"].var()
     print("Varianza de la variable Total: ", varianzatotal,"\nVarianza de la variable Attack: ", varianzaataque,"\nVarianza de la variable Defense: ", varianzadefensa,"\nVarianza de la variable HP: ", varianzahp,"\nVarianza de la variable Sp. Atk: ", varianzaspatk,"\nVarianza de la variable Sp. Def: ", varianzaspdef,"\nVarianza de la variable Speed: ", varianzaspeed)
 varianza(df)
+
+def desviacion(df):
+    print("="*50)
+    # desviacion estandar de la variable Total
+    desviaciontotal = df["Total"].std()
+    # desviacion estandar de la variable Attack
+    desviacionataque = df["Attack"].std()
+    # desviacion estandar de la variable Defense
+    desviaciondefensa = df["Defense"].std()
+    # desviacion estandar de la variable HP
+    desviacionhp = df["HP"].std()
+    # desviacion estandar de la variable Sp. Atk
+    desviacionspatk = df["Sp. Atk"].std()
+    # desviacion estandar de la variable Sp. Def
+    desviacionspdef = df["Sp. Def"].std()
+    # desviacion estandar de la variable Speed
+    desviacionspeed = df["Speed"].std()
+    print("Desviacion estandar de la variable Total: ", desviaciontotal,"\nDesviacion estandar de la variable Attack: ", desviacionataque,"\nDesviacion estandar de la variable Defense: ", desviaciondefensa,"\nDesviacion estandar de la variable HP: ", desviacionhp,"\nDesviacion estandar de la variable Sp. Atk: ", desviacionspatk,"\nDesviacion estandar de la variable Sp. Def: ", desviacionspdef,"\nDesviacion estandar de la variable Speed: ", desviacionspeed)
+desviacion(df)
