@@ -88,8 +88,8 @@ print("Su media es de: " + str(media_mayor_aleatoria))
 # añade los pokemons de la lista_mayor_aleatoria a un nuevo archivo csv llamado "coach_2.csv"
 df3 = df.loc[df["Name"].isin(lista_mayor_aleatoria)].to_csv("coach_2.csv")
 def diagrama():
-    plt.bar(df.loc[df["Name"].isin(lista_mayor_aleatoria)]["Name"], df.loc[df["Name"].isin(lista_mayor_aleatoria)]["Total"], color="blue", label="Pokemon con media mayor a la media de los pokemons obtenidos anteriormente")
-    plt.bar(df.loc[df["Name"].isin(lista_aleatoria)]["Name"], df.loc[df["Name"].isin(lista_aleatoria)]["Total"], color="red", label="Pokemon con media menor a la media de los pokemons obtenidos anteriormente")
+    plt.bar(df.loc[df["Name"].isin(lista_mayor_aleatoria)]["Name"], df.loc[df["Name"].isin(lista_mayor_aleatoria)]["Total"], color="blue", label="Pokemon con media mayor a la media de los pokemons obtenidos aleatoriamente")
+    plt.bar(df.loc[df["Name"].isin(lista_aleatoria)]["Name"], df.loc[df["Name"].isin(lista_aleatoria)]["Total"], color="red", label="Pokemon con media aleatoria")
     plt.legend()
     plt.title("Compararación de equipos")
     plt.xlabel("Pokemon")
