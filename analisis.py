@@ -75,4 +75,15 @@ def grupo(df):
     print("Los datos de los pokemon aleatorios son: ", df.loc[df["Name"].isin(lista_aleatoria)])
 grupo(df)
 # guarda los datos de los pokemon aleatorios en un archivo csv
-df2 = df.loc[df["Name"].isin(lista_aleatoria)].to_csv("Pokemon_aleatorios.csv")
+df2 = df.loc[df["Name"].isin(lista_aleatoria)].to_csv("coach_1.csv")
+# calcula la media del dato Total de los pokemon aleatorios
+media_aleatoria = df.loc[df["Name"].isin(lista_aleatoria)]["Total"].mean()
+print("Su media es de: " + str(media_aleatoria))
+lista_mayor = df.loc[df["Total"] > media_aleatoria]["Name"].tolist()
+lista_mayor_aleatoria = np.random.choice(lista_mayor, 3, replace=False)
+print("Los nombres de los pokemon aleatorios con media mayor a la media de los pokemon obtenidos anteriormente son: ", lista_mayor_aleatoria)
+# calcula la media de los pokemons de la lista_mayor_aleatoria
+media_mayor_aleatoria = df.loc[df["Name"].isin(lista_mayor_aleatoria)]["Total"].mean()
+print("Su media es de: " + str(media_mayor_aleatoria))
+# añade los pokemons de la lista_mayor_aleatoria a un nuevo archivo csv llamado "coach_2.csv"
+df3 = df.loc[df["Name"].isin(lista_mayor_aleatoria)].to_csv("coach_2.csv")

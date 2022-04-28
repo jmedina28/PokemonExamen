@@ -204,11 +204,11 @@ def main():
 
     # Get configuration for Game User 1.
     print("For Game User 1: \n")
-    game_user_1 = get_data_from_user("coach_1_pokemons.csv")
+    game_user_1 = get_data_from_user("Pokemon_aleatorios.csv")
 
     # Get configuration for Game User 2.
     print("For Game User 2: \n")
-    game_user_2 = get_data_from_user("coach_2_pokemons.csv")
+    game_user_2 = get_data_from_user("Pokemon aleatorios.csv")
 
     print("------------------------------------------------------------------")
     print("The Game starts...")
