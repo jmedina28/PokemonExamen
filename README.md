@@ -5,7 +5,7 @@ En este [repositorio](https://github.com/jmedina28/PokemonExamen) queda resuelto
 ***
 ## Ejercicio 
 
-He calculado los principales parámetros estadísticos de todo el dataset y posteriormente he generado un dataset de 3 pokemon.
+He calculado los principales parámetros estadísticos de todo el dataset y posteriormente he generado un dataset de 3 pokemon, finalmente he generado otro dataset con otros tres pokemons con medias superiores a los anteriormente mencionados.
 
 
 El código empleado para resolverlo es el siguiente: 
