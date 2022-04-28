@@ -1,6 +1,6 @@
 import pandas
 import numpy as np
-
+import matplotlib.pyplot as plt
 # lee el archivo "Pokemon.csv" 
 df = pandas.read_csv("Pokemon.csv")
 print(df)
@@ -63,7 +63,7 @@ desviacion(df)
 
 
 def grupo(df):
-    global media_ataque, media_defensa, media_hp, media_sp_ataque, media_sp_defensa, media_speed
+    global lista_aleatoria
     print("="*50)
     # crea una lista con los nombres de los pokemon
     lista = df["Name"].tolist()
@@ -73,18 +73,6 @@ def grupo(df):
     print("Los nombres de los pokemon aleatorios son: ", lista_aleatoria)
     # muestra los datos de los pokemon aleatorios
     print("Los datos de los pokemon aleatorios son: ", df.loc[df["Name"].isin(lista_aleatoria)])
-    #calcula la media de ataque de los pokemon aleatorios
-    media_ataque = df.loc[df["Name"].isin(lista_aleatoria)]["Attack"].mean()
-    #calcula la media de defensa de los pokemon aleatorios
-    media_defensa = df.loc[df["Name"].isin(lista_aleatoria)]["Defense"].mean()
-    #calcula la media de hp de los pokemon aleatorios
-    media_hp = df.loc[df["Name"].isin(lista_aleatoria)]["HP"].mean()
-    #calcula la media de sp. ataque de los pokemon aleatorios
-    media_sp_ataque = df.loc[df["Name"].isin(lista_aleatoria)]["Sp. Atk"].mean()
-    #calcula la media de sp. defensa de los pokemon aleatorios
-    media_sp_defensa = df.loc[df["Name"].isin(lista_aleatoria)]["Sp. Def"].mean()
-    #calcula la media de speed de los pokemon aleatorios
-    media_speed = df.loc[df["Name"].isin(lista_aleatoria)]["Speed"].mean()
-    # imprime las medias de los pokemon aleatorios
-    print("Media de ataque de los pokemon aleatorios: ", media_ataque,"\nMedia de defensa de los pokemon aleatorios: ", media_defensa,"\nMedia de hp de los pokemon aleatorios: ", media_hp,"\nMedia de sp. ataque de los pokemon aleatorios: ", media_sp_ataque,"\nMedia de sp. defensa de los pokemon aleatorios: ", media_sp_defensa,"\nMedia de speed de los pokemon aleatorios: ", media_speed)
 grupo(df)
+# guarda los datos de los pokemon aleatorios en un archivo csv
+df2 = df.loc[df["Name"].isin(lista_aleatoria)].to_csv("Pokemon_aleatorios.csv")
