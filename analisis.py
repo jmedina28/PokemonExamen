@@ -1,8 +1,8 @@
+import pandas
+import numpy as np
+# lee el archivo "Pokemon.csv" 
+df = pandas.read_csv("Pokemon.csv")
+print(df)
 
-def leer_csv():
-    with open('Pokemon.csv', 'r') as archivo:
-        lineas = archivo.readlines()
-        lineas = [linea.replace('\n', '') for linea in lineas]
-        lineas = [linea.split(',') for linea in lineas]
-        return lineas
-print(leer_csv())
+# media de la variable Attack
+print(df["Attack"].mean())
