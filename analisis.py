@@ -2,7 +2,7 @@ import pandas
 import numpy as np
 import matplotlib.pyplot as plt
 # lee el archivo "Pokemon.csv" 
-df = pandas.read_csv("pokemon.csv")
+df = pandas.read_csv("pokemons.csv")
 print(df)
 
 def media(df):
